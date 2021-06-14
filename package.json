@@ -1,24 +1,30 @@
 {
   "name": "shelly-back",
   "version": "1.0.0",
-  "description": "Backend for ecomerce",
+  "description": "Backend Test",
   "main": "index.js",
   "author": "Steven Barquet",
   "license": "ISC",
   "keywords": [
     "node",
     "npm",
+    "typescript",
     "express",
     "backend",
     "api",
     "rest",
     "restfull"
   ],
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/StevenBarquet/login-playground-back.git"
+  },
   "scripts": {
-    "build": "tsc",
     "lint": "eslint . --ext .ts",
-    "dev": "ts-node-dev --respawn index.ts",
-    "start": "tsc; nodemon index.js"
+    "build": "tsc",
+    "build-start": "tsc; node ./dist/index.js",
+    "start": "node ./dist/index.js",
+    "dev": "ts-node-dev --respawn ./src/index.ts"
   },
   "peerDependencies": {
     "eslint": "^7.23.0",
