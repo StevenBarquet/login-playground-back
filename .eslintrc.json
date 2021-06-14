@@ -9,6 +9,10 @@
       "plugin:@typescript-eslint/eslint-recommended",
       "plugin:@typescript-eslint/recommended"
     ],
+    "globals": {
+      "require": "readonly",
+      "process": "readonly"
+    },
     "rules": {
         /* --------------- eslint:recommended --------------- */
         /* Error prevention:*/
@@ -52,6 +56,7 @@
         "no-unmodified-loop-condition": 1,
         "no-shadow": 2,
         "no-shadow-restricted-names": 2,
+        "no-undef": 2,
         /* Best Practices:*/
         "accessor-pairs": 1,
         "block-scoped-var": 1,
