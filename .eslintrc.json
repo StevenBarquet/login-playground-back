@@ -60,7 +60,7 @@
         "default-case": 1,
         "default-case-last": 2,
         "default-param-last": 1,
-        "dot-location": 2,
+        "dot-location": ["error", "property"],
         "dot-notation": 1,
         "eqeqeq": 1,
         "no-case-declarations": 2,
@@ -159,6 +159,9 @@
         "require-yield": 1,
         "rest-spread-spacing": ["error", "never"],
         "sort-imports": "off",
-        "template-curly-spacing": 2
+        "template-curly-spacing": 2,
+
+        /* --------------- eslint:recommended --------------- */
+        "@typescript-eslint/no-var-requires": 0
     }
 }
