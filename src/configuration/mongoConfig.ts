@@ -13,7 +13,7 @@ async function mongoConnect(): Promise<void>{
   } catch (err){
     debugProd('Couldnt connect because:\n', err)
   } finally {
-    debugProd('Connection finished...')
+    debugProd('MongoDB Promise: Resolved...')
   }
 }
 

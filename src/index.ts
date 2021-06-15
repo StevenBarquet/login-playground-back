@@ -6,7 +6,7 @@ const debugProd = require('debug')('app:prod');
 import helmet from 'helmet';
 import cors from 'cors';
 // Routes
-// Import analyticsRoutes from './routes/analytics';
+import authRoutes from './routes/auth';
 // Otros
 import getCerts from './configuration/getCerts'
 import startLogs from './configuration/startLogs'
@@ -26,7 +26,7 @@ app.use(helmet()); // For security
 app.use(cors()); // For security
 
 // -----------------------------------ROUTES-------------------------------
-// App.use('/analytics/', analyticsRoutes)
+app.use('/auth/', authRoutes)
 
 // -----------------------------------SSL-------------------------------
 const http = require('http');

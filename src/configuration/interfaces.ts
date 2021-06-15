@@ -1,8 +1,8 @@
 // --------------------------------------CONFIGURATION------------------------------------
 // ---getCerts
 interface WithFilesCerts {
-  cert: string,
-  key: string
+  cert: string;
+  key: string;
 }
 
 interface EmptyObj { [n: string]: never }
