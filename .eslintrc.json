@@ -11,6 +11,7 @@
     ],
     "globals": {
       "require": "readonly",
+      "console": "readonly",
       "process": "readonly"
     },
     "rules": {
@@ -167,6 +168,8 @@
         "template-curly-spacing": 2,
 
         /* --------------- eslint:recommended --------------- */
-        "@typescript-eslint/no-var-requires": 0
+        "@typescript-eslint/no-var-requires": 0,
+        "@typescript-eslint/no-explicit-any": 0
+
     }
 }

@@ -1,7 +1,10 @@
 // --------------------------------------IMPORTS------------------------------------
 // Dependencies
 import express, {Request, Response} from 'express';
+import {sign} from 'jsonwebtoken';
 const debug = require('debug')('app:routes');
+// Others
+import {TOKEN_NAME, TOKEN_SECRET} from '../configuration/globalData'
 
 const router = express.Router();
 
@@ -18,8 +21,10 @@ router.post('/login', (req: Request, res: Response) => {
   const isAuth = validCredentials(req.body);
 
   if (isAuth){
-    res.cookie('userID', 'token')
-    res.send({status: 'success'});
+    const {_id, mail} = user
+    const accessToken = sign({userId: _id, mail}, TOKEN_SECRET, {expiresIn: '15min'})
+    res.cookie(TOKEN_NAME, accessToken);
+    res.send({status: 'success', accessToken});
   } else {
     res.send({status: 'bad-credentials'})
   }
